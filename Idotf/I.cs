@@ -44,5 +44,25 @@ namespace IdotF
         {
             return new DeferredIf<T>(condition, func);
         }
+
+        public static DeferredIfWithInput<Tin> FDeferred<Tin>(bool condition, Action<Tin> action)
+        {
+            return new DeferredIfWithInput<Tin>(condition, action);
+        }
+
+        public static DeferredIfWithInput<Tin> FDeferred<Tin>(Func<bool> condition, Action<Tin> action)
+        {
+            return new DeferredIfWithInput<Tin>(condition, action);
+        }
+
+        public static DeferredIfWithInput<Tin, Tout> FDeferred<Tin,Tout>(bool condition, Func<Tin, Tout> action)
+        {
+            return new DeferredIfWithInput<Tin, Tout>(condition, action);
+        }
+
+        public static DeferredIfWithInput<Tin, Tout> FDeferred<Tin, Tout>(Func<bool> condition, Func<Tin, Tout> action)
+        {
+            return new DeferredIfWithInput<Tin, Tout>(condition, action);
+        }
     }
 }

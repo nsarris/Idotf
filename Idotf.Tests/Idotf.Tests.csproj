@@ -43,6 +43,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeferredIfWithInputTests.cs" />
     <Compile Include="DeferredIfTests.cs" />
     <Compile Include="IfTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
